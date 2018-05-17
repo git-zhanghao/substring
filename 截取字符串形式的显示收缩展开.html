@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ÎÞ±êÌâÎÄµµ</title>
+<style>
+*{ margin:0; padding:0}
+p{ width:320px; border:1px solid red; margin:100px auto}
+</style>
+<script>
+	window.onload = function(){
+		var oP = document.getElementById('p1');
+		var oSpan = document.getElementById('span1');
+		var oA = oP.getElementsByTagName('a')[0];
+		var str = oSpan.innerHTML;
+		var bFlag = true
+		//alert(str)
+		
+		oA.onclick = function(){
+			if(bFlag){
+				oSpan.innerHTML = str.substring(0,42);	
+				oA.innerHTML = '展开';
+			}else{
+				oSpan.innerHTML = str;	
+				oA.innerHTML = '收缩';
+			}
+			bFlag = !bFlag;
+		};	
+	};
+</script>
+</head>
+
+<body>
+<p id="p1">
+	<span id="span1">
+    	北京时间2月12日晚，CBA联赛第35轮，北京在主场以84-98负于辽宁，四节比分分别是25-31、20-22、17-28和22-17(北京在前)。首节北京还能咬住比分，次节他们一度落后到16分，虽然一度缩小了分差，但第三节他们再度被打爆，最终无力翻盘......</span><a href="javascript:;">收缩</a>
+</p>
+</body>
+</html>
